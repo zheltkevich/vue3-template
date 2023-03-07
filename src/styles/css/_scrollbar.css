@@ -1,0 +1,6 @@
+:root {
+    --scrollbar-width: 16px;
+    --scrollbar-thumb: #9ac6eb;
+    --scrollbar-thumb-hover: #4e8fb9;
+    --scrollbar-thumb-active: #3d7fac;
+}

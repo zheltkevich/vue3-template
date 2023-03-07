@@ -8,8 +8,10 @@ import path from 'path'
 export default defineConfig({
     resolve: {
         alias: {
-            '@images': path.resolve(__dirname, './public/images'),
             '@': path.resolve(__dirname, './src'),
+            '@css': path.resolve(__dirname, './src/styles/css'),
+            '@scss': path.resolve(__dirname, './src/styles/scss'),
+            '@assets': path.resolve(__dirname, './public/assets'),
         },
     },
     plugins: [
@@ -29,7 +31,7 @@ export default defineConfig({
         preprocessorOptions: {
             scss: {
                 additionalData: `
-                @import '@/styles/scss/mixins/mixins.scss';
+                @import '@scss/mixins/mixins.scss';
               `,
             },
         },

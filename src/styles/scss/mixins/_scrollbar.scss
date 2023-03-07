@@ -1,0 +1,61 @@
+@mixin scrollbar(
+    $show-on-hover: false,
+    $scrollbar-width: var(--scrollbar-width),
+    $thumb-color: var(--scrollbar-thumb),
+    $thumb-hover-color: var(--scrollbar-thumb-hover),
+    $thumb-active-color: var(--scrollbar-thumb-active),
+    $track-color: var(--main-bg),
+    $hidden-corner: true
+) {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: transparent transparent;
+
+    @if $hidden-corner {
+        &::-webkit-scrollbar-corner {
+            display: none;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: $scrollbar-width;
+        background-color: $track-color;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-corner {
+        background-color: $track-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: calc(#{$scrollbar-width} / 3.5) solid transparent;
+        border-radius: $scrollbar-width;
+        background-color: $thumb-color;
+        background-clip: content-box;
+        transition: var(--transition);
+
+        @if $show-on-hover {
+            visibility: hidden;
+        }
+
+        &:hover {
+            background-color: $thumb-hover-color;
+        }
+
+        &:active {
+            background-color: $thumb-active-color;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        scrollbar-color: $thumb-color transparent;
+
+        &::-webkit-scrollbar-thumb {
+            visibility: visible;
+        }
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+}
