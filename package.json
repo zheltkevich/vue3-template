@@ -1,23 +1,58 @@
 {
+  "version": "0.0.0",
   "name": "vue3-template",
-  "version": "1.0.0",
   "description": "Vue3, Vite, Pinia, Router, Eslint, Stylelint, Prettier",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zheltkevich/vue3-template.git"
-  },
+  "author": "Aleksandr Zheltkevich",
   "keywords": [
     "vue3",
     "template"
   ],
-  "author": "Aleksandr Zheltkevich",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zheltkevich/vue3-template.git"
+  },
   "bugs": {
     "url": "https://github.com/zheltkevich/vue3-template/issues"
   },
-  "homepage": "https://github.com/zheltkevich/vue3-template#readme"
+  "homepage": "https://github.com/zheltkevich/vue3-template#readme",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore --quiet --fix src",
+    "lint:css": "stylelint \"**/*.{css,scss,vue}\" --quiet --fix",
+    "format": "prettier .  --write",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "npm run lint:js",
+    "*.{vue,css,scss}": "npm run lint:css"
+  },
+  "dependencies": {
+    "pinia": "^2.0.33",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "2.8.4",
+    "sass": "^1.58.3",
+    "stylelint": "^15.2.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-order": "^6.0.2",
+    "stylelint-scss": "^4.4.0",
+    "vite": "^4.1.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-stylelint": "^4.2.0"
+  }
 }
