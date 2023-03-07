@@ -1,0 +1,23 @@
+{
+  "name": "vue3-template",
+  "version": "1.0.0",
+  "description": "Vue3, Vite, Pinia, Router, Eslint, Stylelint, Prettier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zheltkevich/vue3-template.git"
+  },
+  "keywords": [
+    "vue3",
+    "template"
+  ],
+  "author": "Aleksandr Zheltkevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zheltkevich/vue3-template/issues"
+  },
+  "homepage": "https://github.com/zheltkevich/vue3-template#readme"
+}
